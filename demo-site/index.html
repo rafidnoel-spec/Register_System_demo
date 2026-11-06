@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="icon-192.png" />
+  <title>Demo – Församlingsregister, Kaldeisk-katolska missionen</title>
+  <style>
+    :root { --navy:#1f3a5f; --navy-dark:#152a46; --gold:#c9a04e; --gold-light:#f4ead4; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif; color:#1d2433;
+      background:linear-gradient(170deg,var(--navy) 0%,var(--navy-dark) 100%); min-height:100vh; }
+    main { max-width:980px; margin:0 auto; padding:2.5rem 1.25rem 3rem; }
+    header { text-align:center; color:#fff; margin-bottom:2rem; }
+    header img { width:150px; height:150px; border-radius:50%; background:#fff; box-shadow:0 0 0 5px var(--gold); }
+    h1 { margin:1rem 0 .3rem; font-size:2.1rem; }
+    header p { margin:0; color:#cfd8e6; font-size:1.1rem; }
+    .badge { display:inline-block; background:var(--gold); color:var(--navy-dark); font-weight:700; border-radius:20px; padding:.2rem .9rem; margin-top:.9rem; font-size:.85rem; letter-spacing:.05em; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:1.1rem; }
+    .card { background:#fff; border-radius:14px; padding:1.4rem; border-top:4px solid var(--gold); display:flex; flex-direction:column; }
+    .card h2 { margin:0 0 .4rem; color:var(--navy); font-size:1.25rem; }
+    .card p { margin:0 0 1rem; color:#4b5468; line-height:1.45; flex:1; }
+    .btn { display:inline-block; text-align:center; background:var(--navy); color:#fff; text-decoration:none; padding:.75rem 1rem; border-radius:8px; font-weight:600; }
+    .btn:hover { background:var(--navy-dark); }
+    .info { background:#fff; border-radius:14px; padding:1.4rem; margin-top:1.1rem; }
+    .info h2 { margin-top:0; color:var(--navy); font-size:1.15rem; }
+    table { border-collapse:collapse; width:100%; font-size:.95rem; }
+    td, th { text-align:left; padding:.45rem .5rem; border-bottom:1px solid #e3e6ec; }
+    code { background:var(--gold-light); padding:.1rem .4rem; border-radius:4px; }
+    .note { font-size:.9rem; color:#5a6275; }
+    footer { text-align:center; color:#b8c3d6; font-size:.85rem; margin-top:2rem; }
+    footer a { color:var(--gold); }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="logo.jpg" alt="Kaldeisk-katolska missionen Södertälje" />
+    <h1>Församlingsregister</h1>
+    <p>Medlemsregister för församlingens kyrkor</p>
+    <span class="badge">DEMO</span>
+  </header>
+
+  <div class="cards">
+    <div class="card">
+      <h2>Administration</h2>
+      <p>Logga in som Root, Län, Stad eller Kyrka och se hur behörigheterna styr vad man ser. Du kan hantera medlemmar, familjer, sakrament och listor, och skriva ut familjerapporter.</p>
+      <a class="btn" href="admin/">Öppna administrationen</a>
+    </div>
+    <div class="card">
+      <h2>Bli medlem</h2>
+      <p>Det publika registreringsformuläret, utan inloggning, på svenska, arabiska och engelska. Det du skickar in hamnar under <em>Nya registreringar</em> i administrationen.</p>
+      <a class="btn" href="registrering/">Öppna formuläret</a>
+    </div>
+    <div class="card">
+      <h2>Surfplatta vid dörren</h2>
+      <p>Kioskläget för en iPad eller annan surfplatta vid kyrkans ingång. Kyrkan är förvald och knapparna är stora. Formuläret rensas automatiskt efter varje registrering.</p>
+      <a class="btn" href="registrering/#/kiosk/a1b2c3d4e5f60718293a4b5c6d7e8f90">Öppna kioskläget</a>
+    </div>
+  </div>
+
+  <div class="info">
+    <h2>Demokonton</h2>
+    <table>
+      <tr><th>E-post</th><th>Behörighet</th><th>Ser</th></tr>
+      <tr><td><code>root@demo.se</code></td><td>Root</td><td>Allt – alla län, städer och kyrkor</td></tr>
+      <tr><td><code>lan@demo.se</code></td><td>Län</td><td>Stockholms län (Södertälje och Stockholm)</td></tr>
+      <tr><td><code>stad@demo.se</code></td><td>Stad</td><td>Södertälje (två kyrkor)</td></tr>
+      <tr><td><code>kyrka@demo.se</code></td><td>Kyrka</td><td>Demokyrkan S:t Josef</td></tr>
+    </table>
+    <p>Lösenord för alla: <code>demo</code>. På inloggningssidan kan du också klicka direkt på ett konto.</p>
+    <p class="note">
+      Alla personer, adresser och personnummer i demon är påhittade. Demon körs helt i din webbläsare.
+      Ändringar sparas bara lokalt (localStorage) och skickas inte till någon server, och inga e-postmeddelanden skickas.
+      Med knappen <em>Återställ demodata</em> i administrationen börjar du om. Det riktiga systemet har ett API i C#/.NET 10 med SQL Server,
+      krypterade personnummer och granskningslogg.
+    </p>
+  </div>
+
+  <footer>
+    Källkod: <a href="https://github.com/rafidnoel-spec/Register_System_demo">github.com/rafidnoel-spec/Register_System_demo</a>
+  </footer>
+</main>
+</body>
+</html>

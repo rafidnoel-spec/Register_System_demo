@@ -1,0 +1,10 @@
+@api = https://localhost:7180
+
+### Logga in
+POST {{api}}/api/auth/login
+Content-Type: application/json
+
+{ "email": "root@example.org", "password": "Byt-Detta-Losenord-2026!" }
+
+### Publika kyrkor
+GET {{api}}/api/public/churches

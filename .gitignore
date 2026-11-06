@@ -1,0 +1,27 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+*.slnLaunch.user
+appsettings.Production.json
+appsettings.*.local.json
+
+# Node
+node_modules/
+dist/
+*.local
+
+# Lokala mejl i utvecklingsläge (kan innehålla personuppgifter)
+.mail-pickup/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+
+# Exporterade listor får aldrig checkas in
+*.csv
+registerutdrag-*.json

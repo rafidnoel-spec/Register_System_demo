@@ -1,0 +1,10 @@
+[
+  {
+    "Name": "Allt (API + Admin + Registrering)",
+    "Projects": [
+      { "Path": "src\\RegisterSystem.Api\\RegisterSystem.Api.csproj", "Action": "Start", "DebugTarget": "https" },
+      { "Path": "src\\register-admin\\register-admin.esproj", "Action": "StartWithoutDebugging" },
+      { "Path": "src\\register-public\\register-public.esproj", "Action": "StartWithoutDebugging" }
+    ]
+  }
+]
