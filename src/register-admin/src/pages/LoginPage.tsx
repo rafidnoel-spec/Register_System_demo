@@ -45,7 +45,7 @@ export default function LoginPage() {
               ['root@demo.se', 'Root – hela organisationen'],
               ['lan@demo.se', 'Län – Stockholms län'],
               ['stad@demo.se', 'Stad – Södertälje'],
-              ['kyrka@demo.se', 'Kyrka – Demokyrkan S:t Josef']
+              ['kyrka@demo.se', 'Kyrka – Jungfru Marias kaldéisk-katolska kyrka']
             ].map(([mail, label]) => (
               <button type="button" key={mail} onClick={async () => {
                 setEmail(mail); setPassword('demo'); setError(null);

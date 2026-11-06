@@ -43,7 +43,7 @@ interface DB {
 }
 
 const STORAGE_KEY = 'rs_demo_db';
-const DB_VERSION = 1;
+const DB_VERSION = 2; // höj när demodatan ändras så att webbläsare får ny data
 const POLICY_VERSION = '1.0';
 export const DEMO_KIOSK_CODE = 'a1b2c3d4e5f60718293a4b5c6d7e8f90';
 export const DEMO_PASSWORD = 'demo';
@@ -72,7 +72,7 @@ function seed(): DB {
     counties: [{ id: 1, name: 'Stockholms län' }, { id: 2, name: 'Västra Götalands län' }],
     cities: [{ id: 1, name: 'Södertälje', countyId: 1 }, { id: 2, name: 'Stockholm', countyId: 1 }, { id: 3, name: 'Göteborg', countyId: 2 }],
     churches: [
-      { id: 1, name: 'Demokyrkan S:t Josef', address: 'Exempelvägen 1, 151 30 Södertälje', cityId: 1, acceptsPublicRegistration: true, kioskCode: DEMO_KIOSK_CODE },
+      { id: 1, name: 'Jungfru Marias kaldéisk-katolska kyrka', address: 'Exempelvägen 1, 151 30 Södertälje', cityId: 1, acceptsPublicRegistration: true, kioskCode: DEMO_KIOSK_CODE },
       { id: 2, name: 'Demokyrkan S:ta Maria', address: 'Kyrkgatan 4, 152 40 Södertälje', cityId: 1, acceptsPublicRegistration: true, kioskCode: 'b2c3d4e5f60718293a4b5c6d7e8f90a1' },
       { id: 3, name: 'Demokyrkan S:t Thomas', address: 'Storgatan 10, 111 22 Stockholm', cityId: 2, acceptsPublicRegistration: true, kioskCode: 'c3d4e5f60718293a4b5c6d7e8f90a1b2' },
       { id: 4, name: 'Demokyrkan S:t Georg', address: 'Hamngatan 2, 411 06 Göteborg', cityId: 3, acceptsPublicRegistration: true, kioskCode: 'd4e5f60718293a4b5c6d7e8f90a1b2c3' }
